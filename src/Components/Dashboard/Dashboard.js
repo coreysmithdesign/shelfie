@@ -10,7 +10,7 @@ function Dashboard (props) {
   ))
 
   return (
-    <div>
+    <div className="site-dashboard">
       {inventoryMap}
     </div>
   )

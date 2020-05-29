@@ -2,10 +2,10 @@ import React from 'react';
 
 function Product (props) {
   return (
-    <div>
-      <p>{props.itemData.img}</p>
-      <p>{props.itemData.name}</p>
-      <p>{props.itemData.price}</p>
+    <div className="site-product">
+      <img className="product-image" src={props.itemData.img} alt={props.itemData.img} />
+      <p>Name: {props.itemData.name}</p>
+      <p>Price: {props.itemData.price}</p>
     </div>
   )
 }

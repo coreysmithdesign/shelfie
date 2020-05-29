@@ -11,6 +11,7 @@
   background: #ab2a19;
   color: white;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 .site-logo {
   display: block;
@@ -22,6 +23,41 @@
   text-transform: uppercase;
 }
 
+.site-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-form {
+  flex: 1;
+  max-width: 400px;
+}
+.site-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: #3ad886;
+  border-radius: 10px;
+}
+
+.site-dashboard {
+  flex: 1;
+}
+
+.site-product {
+  margin: 0 2rem 2rem; 
+  padding: 2rem;
+  border-radius: 10px;
+  background: #d34735;
+}
+
+.product-image {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+}
+
 @media only screen and (min-width: 900px)  {
   .site-header .contain {
     display: flex;
@@ -30,5 +66,9 @@
 
   .site-logo {
     margin-right: 2rem;
+  }
+
+  .site-content {
+    display: flex;
   }
 }

@@ -50,7 +50,7 @@ class Form extends Component {
 
   render(){
     return (
-      <div>
+      <div className="site-form">
         <form onSubmit={this.handleSubmit}>
           <div>image_preview</div>
           <label htmlFor="image">Image URL:</label>
