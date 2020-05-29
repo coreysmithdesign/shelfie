@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Product extends Component {
-  render(){
-    return (
-      <div>Product</div>
-    )
-  }
+function Product (props) {
+  return (
+    <div>
+      <p>{props.itemData.img}</p>
+      <p>{props.itemData.name}</p>
+      <p>{props.itemData.price}</p>
+    </div>
+  )
 }
 
 export default Product

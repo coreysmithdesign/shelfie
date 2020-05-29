@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const massive = require('massive')
-const controller = './controller'
+const controller = require('./controller')
 const app = express()
 const { SERVER_PORT, CONNECTION_STRING } = process.env
 
@@ -18,7 +18,11 @@ massive({
   })
   .catch(err => console.log(err))
 
+// RESTful endpoints
+app.get('/api/inventory', controller.allProducts)
+app.post('/api/product', controller.addProduct)
+
 // start listening for incoming requests
 app.listen(SERVER_PORT, () => {
-  console.log(`Shelfie-ing items on port ${SERVER_PORT}`)
+  console.log(`Merchendising on port ${SERVER_PORT}`)
 })

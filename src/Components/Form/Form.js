@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Form extends Component {
   constructor(){
@@ -35,8 +36,16 @@ class Form extends Component {
 
   handleSubmit(e){
     e.preventDefault()
+
+    axios.post('/api/product', {
+      image: "newimage",
+      name: "newname",
+      price: "newprice"
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+
     e.target.reset()
-    this.props.addMaterial(this.state.name)
   }
 
   render(){
